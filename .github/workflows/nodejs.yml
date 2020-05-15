@@ -36,4 +36,4 @@ jobs:
         credentials type: 'username'
         user: 'hp185045'
         password: ${{ secrets.artifact_key }}
-        args: u "app.js" "https://ncr.jfrog.io/artifactory/hspre-generic-group/test/" 
+        args: u "app.js" "https://ncr.jfrog.io/artifactory/hspre-generic-group/test" 
