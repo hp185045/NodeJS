@@ -1,0 +1,16 @@
+name: A workflow for my Hello World file
+on: push
+jobs:
+  artifactoryUpload:
+    name: Upload Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1.2.0
+    - name: publish to artifactory
+      uses: advancedcsg-open/action-jfrog-cli@master
+      with:
+        url: 'https://ncr.jfrog.io/'
+        credentials type: 'username'
+        user: 'hp185045'
+        password: ${{ secrets.artifact_key }}
+        args: u "app.js" "hspre-generic-snapshots/" 
