@@ -39,4 +39,4 @@ jobs:
         url: 'https://ncr.jfrog.io/'
         user: 'username'
         password: ${{ secrets.artifact_key }}
-        args: u "app.js" "https://ncr.jfrog.io/artifactory/hspre-generic-group/" --recursive=true --build-name=myawesomeapp
+        args: u "app.js" "https://ncr.jfrog.io/artifactory/hspre-generic-group/" --recursive=true
