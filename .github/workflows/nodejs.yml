@@ -32,8 +32,8 @@ jobs:
     - name: publish to artifactory
       uses: advancedcsg-open/action-jfrog-cli@master
       with:
-        url: 'https://artifactory.hospitality.ncr.com/'
+        url: 'https://ncr.jfrog.io/'
         credentials type: 'username'
-        user: 'hp185045'
+        user: 'hp185045@ncr.com'
         password: ${{ secrets.artifact_key }}
-        args: u "app.js" "nolo/test" 
+        args: u "app.js" "hspre-generic-group/test" 
