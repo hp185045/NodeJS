@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -32,8 +32,8 @@ jobs:
     - name: publish to artifactory
       uses: advancedcsg-open/action-jfrog-cli@master
       with:
-        url: 'https://ncr.jfrog.io/'
+        url: 'https://artifactory.hospitality.ncr.com/'
         credentials type: 'username'
         user: 'hp185045'
         password: ${{ secrets.artifact_key }}
-        args: u "app.js" "https://ncr.jfrog.io/artifactory/hspre-generic-group/test" 
+        args: u "app.js" "nolo/test" 
