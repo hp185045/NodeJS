@@ -27,3 +27,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+      
+    
+    - name: publish to artifactory
+      uses: advancedcsg-open/action-jfrog-cli@master
+      with:
+        url: 'https://ncr.jfrog.io/'
+        credentials type: 'username'
+        user: 'hp185045@ncr.com'
+        password: ${{ secrets.artifact_key }}
+        args: u "app.js" "hspre-generic-snapshots/test" 
