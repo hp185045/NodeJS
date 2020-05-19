@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: azure
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -36,4 +36,4 @@ jobs:
         credentials type: 'username'
         user: 'hp185045@ncr.com'
         password: ${{ secrets.artifact_key }}
-        args: u "app.js" "nolo-docker-snapshots/" 
+        args: u "app.js" "hspre-generic-snapshots/test" 
